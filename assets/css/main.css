@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	@-ms-viewport {
@@ -165,6 +166,40 @@ input, select, textarea {
 	p {
 		margin: 0 0 2em 0;
 	}
+
+	figcaption {
+		font-size: smaller;
+		font-style: italic;
+	}
+
+
+	.background-banner {
+		background-color: #e4d3dca0;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-left:40px;
+		padding-right:40px;
+		/* color: white; */
+		border-radius: 25px;
+	}
+
+	.shamama {
+		color: white;
+	}
+
+	.wrapper {
+		min-height: 100%;
+	  
+		/* Equal to height of footer */
+		/* But also accounting for potential margin-bottom of last child */
+		margin-bottom: -50px;
+	  }
+	  .footer,
+	  .push {
+		height: 50px;
+	  }
+	
+
 
 	h1 {
 		/* color: #6E44FF; */
@@ -2340,8 +2375,10 @@ input, select, textarea {
 
 		.image.right {
 			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
+			
+			/* float: right;
+			padding: 0 0 1em 10em;
+			top: 0.25em; */
 		}
 
 		.image.fit {
@@ -2995,6 +3032,7 @@ input, select, textarea {
 		cursor: default;
 		visibility: hidden;
 		z-index: 10002;
+		font-weight: bold;
 	}
 
 		#menu > .inner {
@@ -3168,6 +3206,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 5em 0 6em 0 ;
+		/* margin-top: 20em; */
 		/* background-image: linear-gradient(#F67062, #FC5296); */
 		background-color: #FF90B3;
 	}

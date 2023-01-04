@@ -59,25 +59,42 @@
 				</nav>
 
 				<!-- Main -->
-				<div id="main">
-					<div class="inner">
-						<h1>FPGA Etch-A-Sketch</h1>
-						<span class="image main"><img src="images/etch/lab2-block-diagram.png" alt="" /></span>
-						<p class="background-banner">Max Stopyra and I implemented an Etch-A-Sketch using an FPGA and a capacitive touch screen. Using SystemVerilog, I created a finite state machine 
-							representing the states and transitions of the Etch-A-Sketch. The two controllers to communicate with the capacitive touch screen and the display controller
-							respectively use I2C and SPI. A more in-depth description can be found in my <a href="https://docs.google.com/document/d/1xcQ0Sm-saeU7Vpc2pABXXc2BLaX-9YN5lGHERpzDnxE/edit?usp=sharing">
-								lab documentation</a>, and the code implementation can be found in my <a href="https://github.com/ssirroon/olin-cafe-f22/tree/lab2/labs/02_etch_a_sketch">
-									GitHub</a>. 
-						</p>	
+					<div id="main">
+						<div class="inner">
+							<h1>Suspension Sensing Suite</h1>
+							<span class="image main"><img src="images/sensing/sensing_diagram.png" alt="" /></span>
+							<p class="background-banner">I have been working on designing a suspension testing system for my collegiate Formula team's suspension
+								system. In order to validate our design assumptions and understand any issues in previous suspension iterations,
+								we want to be able to measure certain high-level characteristics of our suspension. The factors we want to measure are our
+								acceleration, ride and roll, shock displacement, wheel speed, and the force going through our suspension members.
+								<br><br>
+								The sensors that we will implement include wheel speed sensors, linear potentiometers to measure shock displacement,
+								strain gauges to measure force going through suspension members, and an IMU to measure acceleration and roll.
+
+							</p>
+							<figure>
+							<center><img src="images/sensing/sensor_pics.png" width=70% alt="" />
+							<figcaption>Our specific sensors: linear potentiometers (top), wheel speed sensors (bottom left), strain gauges (bottom center), and IMU (bottom right).</figcaption>
+						</center>	
+						</figure>
+						<br>
+						<center>
 						<figure>
-						<center><span class="image"><img src="images/etch/draw.jpg" center center></span>	
-						<figcaption>An example of the <a href="https://www.adafruit.com/product/2090">capacitive touch screen</a>'s drawing capabilities.</figcaption>	
-					</center></figure>			
+							<img src="images/sensing/m2connector.png" width=30% alt="" />
+							<figcaption>KiCAD layout example of the pinouts of our M.2 connector, which connect our sensors to our ATMega16.</figcaption>	
+						</figure>	
+						</center>
+						<br>
+						<p class="background-banner">We initially looked for sensors that fit our sensitivity, voltage, and size requirements. We then created a blcok diagram in Miro which is pictured at the top of the page.
+								Upon finalizing the block diagram, we began our KiCAD layout, intially making use of hierarchical sheets, then creating individual projects for each board. We will now be sending out the boards for shipping,
+								then populating them when they return to Olin.
+							</p>
+						</div>
 					</div>
-				</div>
 
 				<!-- Footer -->
 					<footer id="footer">
+						<!-- <footer id="footer" style="margin-top:10em"> -->
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
