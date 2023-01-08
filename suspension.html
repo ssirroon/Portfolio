@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Suspension</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -61,29 +61,70 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Suspension Design and Fabricatison</h1>
-							,<center>
+							<h1>Suspension Design and Fabrication</h1>
+							<center>
 							<img src="images/suspension/sus_inprogress.jpg" width="50%" alt="" style="margin-top: -20px; padding-bottom: 4em;"/>
 							</center>
-							<p class="background-banner">As a member of the suspension subteam on my collegiate FSAE team, I learned a lot of technical skills
-								in addition to leadership, organizational, and collaboration skills.
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 3</div>
+	  <center>
+	  <img src="images/suspension/image2.png" style="width:45%">
+	  <div class="text">CAD of Mk.6 Chassis</div>
+	</center>
+	</div>
+  
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 3</div>
+	  <center>
+	  <img src="images/suspension/image3.png" style="width:65%">
+	  <div class="text">Showing the A-Arms and push bars of Mk.6.</div>
+	</center>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<center>
+		<img src="images/suspension/image1.png" style="width:50%">
+		<div class="text">Close-up of the rear suspension setup.</div>
+	  </center>
+	  </div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <br><br>
+							<p class="background-banner">As a member of the suspension subteam on my collegiate FSAE team, I learned a lot of technical skills in addition to leadership, organizational, and collaboration skills.
 
 								For the 2021-2022 academic year, I worked on learning about vehicle dynamics, understanding the previous state of the car when the previous
-								team members had to leave for COVID, and compiling the information on what needs to be made and the location of parts already fabricated.
+								team members had to leave for COVID, and compiling the information on what needs to be made and parts already fabricated. I designed and fabricated parts for the suspension system and worked to assemble the system as a whole, ensuring everything was compliant with the FSAE rules. I created and taught lessons on vehicle dynamics and suspension design for the new first-years.
+<br><br>
+								For the 2022-2023 academic year, I helped design the current suspension system using a MATLAB script to determine suspension nodes that implements gradient optimization to find possible nodes within a specified solution space based on high-level suspension characteristics.
+								I have also been mentoring the current suspension lead, offering help and guidance whenever they need it.
 
-								2022-2023, desiginging using MATLAB script to determine suspension nodes that uses gradient optimization to find nodes
-								based on high-level suspension characteristics
-								mentoring current lead
-								teaching lessons on vehicle dynamics and suspenison design
-								in solidworks putting in new nodes, working to design suspension system
-								making tabs, jigs, and conducting FEA - ensuring FOS and manufacturability and tooling
-
-								speaking with other subteams for space constraints for chassis design which are determined by our suspension nodes
-
-								Our <a href="https://docs.google.com/presentation/d/11wFY7qtwvScl5UnRBjF7mjwcFo4ulh8lQin3QNIZkRY/edit?usp=sharing">slideshow</a> showcases our team’s overall design process, and slides 19-34 focus on our suspension design, fabrication, assembly, and testing.
+								<br><br>
+								To complete suspension design, we had to take the nodes outputted from MATLAB and enter them into SolidWorks, ensuring there are no interferences between suspension members and that the geometry makes sense.
+								I have also worked on making tabs, jigs, and conducting FEA - ensuring a proper factor of safety, manufacturability, and sufficient tooling space.
+<br>
+								Our <a href="https://docs.google.com/presentation/d/11wFY7qtwvScl5UnRBjF7mjwcFo4ulh8lQin3QNIZkRY/edit?usp=sharing">slideshow</a> showcases our team’s overall design process, and slides 19-33 focus on our suspension design, fabrication, assembly, and testing.
 							</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
 						</div>
+
+						
 					</div>
 
 				<!-- Footer -->
@@ -136,5 +177,35 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<script>
+				let slideIndex = 1;
+			showSlides(slideIndex);
+			
+			// Next/previous controls
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+			
+			// Thumbnail image controls
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+			
+			function showSlides(n) {
+			  let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			}
+			</script>
 	</body>
 </html>

@@ -164,7 +164,8 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		/* margin: 0 0 2em 0; */
+		margin: 0 10em 2em 10em;
 	}
 
 	figcaption {
@@ -2359,11 +2360,11 @@ input, select, textarea {
 			display: block;
 		}
 
-		.image.left, .image.right {
+		.image.left, .image.right, image.center {
 			max-width: 40%;
 		}
 
-			.image.left img, .image.right img {
+			.image.left img, .image.right, image.center img {
 				width: 100%;
 			}
 
@@ -2375,10 +2376,15 @@ input, select, textarea {
 
 		.image.right {
 			float: right;
-			
+			padding: 0 30em 1em 0em;
+			top: 0.25em;
 			/* float: right;
 			padding: 0 0 1em 10em;
 			top: 0.25em; */
+		}
+
+		.image.center {
+			float: center;
 		}
 
 		.image.fit {
@@ -3417,7 +3423,7 @@ input, select, textarea {
 		  font-size: 15px;
 		  padding: 8px 12px;
 		  position: absolute;
-		  bottom: 8px;
+		  bottom: -35px;
 		  width: 100%;
 		  text-align: center;
 		}
@@ -3457,3 +3463,37 @@ input, select, textarea {
 		  from {opacity: .4}
 		  to {opacity: 1}
 		}
+
+		.column {
+			float: left;
+			width: 50%;
+			}
+		
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+
+		.column-three {
+			float: left;
+			}
+		
+			/* Set width length for the left, right and middle columns */
+			.left {
+			width: 30%;
+			}
+		
+			.middle {
+			width: 30%;
+			}
+			
+			.right {
+			width: 30%;
+			}
+		
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
