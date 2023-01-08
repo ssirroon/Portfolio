@@ -185,12 +185,12 @@ input, select, textarea {
 
 	.background-banner {
 		background-color: #e4d3dca0;
-		padding-top: 50px;
-		padding-bottom: 50px;
-		padding-left:40px;
-		padding-right:40px;
+		padding-top: 2.5em;
+		padding-bottom: 2.5em;
+		padding-left:2em;
+		padding-right:2em;
 		/* color: white; */
-		border-radius: 25px;
+		border-radius: 1.25em;
 	}
 
 	.shamama {
