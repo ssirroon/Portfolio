@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			body {
 			/* background-image: linear-gradient(#B892FF, #FFC2E2); */
@@ -21,6 +23,18 @@
 			}
 			header {
 				color: aliceblue
+			}
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(200px, 1fr));
+				grid-auto-rows: minmax(150px, auto);
+				grid-gap: 1em;
+				}
+				.module {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 200px;
 			}
 		</style>
 	</head>
@@ -78,22 +92,30 @@
 								My report for designing and fabricating fins and bladders is linked <a href="https://drive.google.com/file/d/1b27zQq9s7GG_kkczVOse8mih8D3Cnxm7/view?usp=sharing">here</a>.
 								I was also awarded a <a href="https://www.hluce.org/programs/clare-boothe-luce-program/">Claire Booth Luce Research Award</a> to continue my research over the summer.
 								<div class="row">
-									<div style="padding-left: 70px" class="column-three left">
-										<center><img style="padding-left: 50px" height=100% width=100% src="images/robotuna/image1.jpg">
-										<figcaption style="padding-left: 40px;">3D prints of 2-part fin molds of various shapes and sizes.</figcaption>
+									<div class="grid">
+								<div class="module">
+									<!-- <div style="padding-left: 70px" class="column-three left"> -->
+										<center><img height=100% width=100% style="display: inline-block" src="images/robotuna/image1.jpg">
+										<figcaption style="width: 20em">3D prints of 2-part fin molds of various shapes and sizes.</figcaption>
 										</center>
-									</div>
-									<div style="padding-left: 80px" class="column-three middle">
-										<center><img style="padding-top: 50px;" height=100% width=100% src="images/robotuna/image2.jpg">
-										<figcaption>Casted silicon fin with two nitinol wires running through to bend the fin in either direction.</figcaption>
-										</center>
-									</div>
-									<div style="padding-left: 90px" class="column-three right">
-										<center><img height="110%" width="110%" src="images/robotuna/image4.png">
-										<figcaption style="padding-left: 30px;">Graph showing the elastic modulus versus the tensile strength of various silicones I tested.</figcaption>
-										</center>
-									</div>
+									<!-- </div> -->
 								</div>
+								<div class="module">
+									<!-- <div style="padding-left: 80px" class="column-three middle"> -->
+										<center><img style="padding-top: 50px;" height=100% width=100% src="images/robotuna/image2.jpg">
+										<figcaption style="width: 20em">Casted silicon fin with two nitinol wires running through to bend the fin in either direction.</figcaption>
+										</center>
+									<!-- </div> -->
+								</div>
+								<div class="module">
+									<!-- <div style="padding-left: 90px" class="column-three right"> -->
+										<center><img height="100%" width="100%" src="images/robotuna/image4.png">
+										<figcaption style="width: 20em">Graph showing the elastic modulus versus the tensile strength of various silicones I tested.</figcaption>
+										</center>
+									<!-- </div> -->
+								</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
