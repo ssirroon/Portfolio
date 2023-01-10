@@ -115,6 +115,27 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+		@font-face {
+			font-family: "DM Sans";
+			src: url('DMSans-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		  }
+		  
+		  
+		  @font-face {
+			font-family: "DM Sans";
+			src: url('DMSans-Bold.ttf') format('truetype');
+			font-weight: bold;
+			font-style: normal;
+		  }
+		  
+		  @font-face {
+			font-family: "DM Sans";
+			src: url('fonts/DMSans-Italic.ttf') format('truetype');
+			font-weight: normal;
+			font-style: italic;
+		  }
 /* Type */
 
 	body, input, select, textarea {
@@ -123,7 +144,8 @@ input, select, textarea {
 		/* font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.75; */
-		font-family: "Mada";
+		font-family: "DM Sans";
+		letter-spacing: .03rem;
 		font-size: 22px; }
 		/* font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; 
 		font-weight: 700; line-height: 26.4px; } h3 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; 
@@ -191,6 +213,7 @@ input, select, textarea {
 		padding-right:2em;
 		/* color: white; */
 		border-radius: 1.25em;
+		margin: 0 10em 2em 10em;
 	}
 
 	.shamama {
