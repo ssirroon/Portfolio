@@ -22,6 +22,30 @@
 			header {
 				color: aliceblue
 			}
+			.row {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-around;
+				min-height: 200px;
+			}
+			.module {
+				flex: 33%;
+			}
+			.column {
+				flex: 50%;
+			}
+			@media (max-width: 800px) {
+				.module {
+					flex: 100%;
+				}
+				.column {
+					flex: 100%;
+				}
+			}
+			.module img {
+				padding-top: 50px;
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -71,7 +95,16 @@
 								and a value, which represents the number of times the character appears in our inputted string. Characters that appear 
 							more frequently are assigned shorter codewords to maximize the compression of the encoded message.</p>
 							<div class="row">
-								<div class="column">
+								<div class="module">
+									<center><img src="images/huffman/table.png"></center>
+									<center><figcaption>One of the outputs of our script is a table matching characters to corresponding codewords.</figcaption></center>
+								</div>
+								<div class="module">
+									<center><img width="80%" src="images/huffman/tree.png"></center>
+									<center><figcaption>
+										The image above displays a list of the inputted characters and their frequencies, as well as a visualization of our Huffman encoding tree.</figcaption></center>
+								</div>
+								<!-- <div class="column">
 									<img style="padding-left: 15em" src="images/huffman/table.png">
 								</div>
 								<div class="column" style="padding-right: 5em;">
@@ -82,7 +115,7 @@
 										The image above displays a list of the inputted characters and their frequencies, as well as a visualization of 
 										our Huffman encoding tree.
 									</p>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
