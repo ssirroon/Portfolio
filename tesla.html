@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tesla</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body {
+			/* background-image: linear-gradient(#B892FF, #FFC2E2); */
+			background: url('images/aboutmev2.jpg') no-repeat center center fixed; 
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size:cover;
+			}
+			header {
+				color: aliceblue
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="inner">
+
+						<!-- Logo -->
+							<a href="index.html" class="logo">
+								<!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span> -->
+								<span class="title">Home</span>
+							</a>
+
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="resume.html">Resume</a></li>
+						<li><a href="elements.html">About Me</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Tesla</h1>
+
+							<!-- Slideshow container -->
+<div class="slideshow-container">
+
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 3</div>
+	  <center>
+	  <img src="images/tesla/angle_grind.jpg" style="width:30%">
+	  <div class="text">Working on mounting mechanism for LIDAR road scanning device</div>
+	</center>
+	</div>
+  
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 3</div>
+	  <center>
+	  <img src="images/tesla/track.jpg" style="width:40%">
+	  <div class="text">Completing test lap for powertrain vehicle-level test</div>
+	</center>
+	</div>
+
+	<div class="mySlides fade">
+		<div class="numbertext">3 / 3</div>
+		<center>
+		<img src="images/tesla/xt_mount.jpg" style="width:60%">
+		<div class="text">Mounting LIDAR scanning device on Model S</div>
+	  </center>
+	  </div>
+
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <br><br>
+
+  <p class="background-banner">While at Tesla, I worked on a few different projects in addition to being responsible for multiple vehicle-level tests:
+	powertrain, durability, and suspension strength.
+<br><br>
+	My internship projects included creating a pothole detection algorithm and determining road roughness. To create a pothole detection algorithm,
+	I found multiple local potholes at various sizes and depths and tested hitting them at various speeds. I then created variable thresholds for 
+	wheel speed, vehicle speed, longitudinal acceleration, and brake torque. I determined these thresholds through the data I obtained and 
+	wrote a MATLAB script to iterate through CAN data and find potholes determined by the thresholds I set. This algorithm is able to detect approximately
+	96% of the potholes that I hit (125/130). These thresholds will be implemented by the firmware team for pothole data collection on large fleets of
+	our vehicles.
+<br><br>
+	To determine road roughness, I worked with both a commercial LIDAR scanning sensor as well as laser sensors. I mounted a laser sensor in front of each
+	wheel on a Model S, on which the commercial road scanning device is also mounted. By driving through various roads, I was able to look at the road roughness
+	data of the road in front of each wheel. The laser sensor raw output is a voltage representing the distance between the laser sensor and the 
+	road. I created a calibration curve to convert from voltage to distance, and I implemented pitch compensation by integrating the pitch rate signal
+	from the vehicle and using trigonometry to ensure the pitch of the vehicle does not affect the height measurement from the laser sensors. I was
+	able to successfully measure the roughness of the road via both the commercial road scanning device as well as the laser sensors, which means that we will
+	be able to measure road roughenss on many more vehicles using the laser sensors, and will not have to depend on an off-the-shelf product.
+<br><br>
+	Regarding vehicle-level tests, my responsibilities included
+	working with operators and technicians to ensure vehicles were properly prepped and returned, implementing the various
+	testing procedures with operators, working with the logistics team for vehicle delivery and proving ground usage, CAN signal analysis,
+	and real-time problem solving for any issues that came up. For example, during a durability test that I was running, we had an issue
+	with the camera harness on the vehicle. This issue was dicovered as we ran a self-test on the vehicle every day, and I created a data parsing script in 
+	Python to tell us whether the harness was functioning. After we saw the failure, I connected with the camera team, discussed next steps,
+	and sent the faulty harness to them, replacing it was a new harness we received.
+
+</p>
+		</div>
+	</div>
+
+</div>
+</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="mailto:ssirroon@olin.edu">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<!-- <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+									<li><a href="https://www.linkedin.com/in/shamama-sirroon/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+									<li><a href="https://github.com/ssirroon" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li> -->
+									<li><a href="mailto:ssirroon@olin.edu" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<!-- <ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul> -->
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+
+	</body>
+</html>
