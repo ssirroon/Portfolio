@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SpaceX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body {
+			/* background-image: linear-gradient(#B892FF, #FFC2E2); */
+			background: url('images/aboutmev2.jpg') no-repeat center center fixed; 
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size:cover;
+			}
+			header {
+				color: aliceblue
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<div class="inner">
+
+						<!-- Logo -->
+							<a href="index.html" class="logo">
+								<!-- <span class="symbol"><img src="images/logo.svg" alt="" /></span> -->
+								<span class="title">Home</span>
+							</a>
+
+						<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="resume.html">Resume</a></li>
+						<li><a href="elements.html">About Me</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>SpaceX</h1>
+		<div class="slideshow-container">
+
+			<!-- Full-width images with number and caption text -->
+
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<center>
+				<img src="images/spacex/shamama.jpg" style="width:35%">
+				<div class="text">In front of the F9 booster by SpaceX Hawthorne</div>
+				</center>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<center>
+				<img src="images/spacex/friend.jpg" style="width:35%">
+				<div class="text">My Avionics teammate Laura and I!</div>
+			</center>
+			</div>
+			
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<center>
+				<img src="images/spacex/group.jpg" style="width:60%">
+				<div class="text">Some of the summer 2023 SpaceX interns I was lucky enough to meet!</div>
+			</center>
+			</div>
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+							
+					<br><br>
+				<p class="background-banner">During the course of this internship, I worked on the Falcon Avionics team as a software engineering intern and completed
+					4 distinct projects. The first part of my internship focused on working on the Falcon Support Rack (FSR), which is used to power the vehicle prior 
+					to launch, and documenting the rack in our in-house avionics software. The second half focused on the creation of a database and web searcher regarding 
+					alarms thrown during rocket checks, pre-launch, and flight. In addition to these projects, I wrote a few automation scripts to run specific pre-flight 
+					checks that are required before getting the OK for launch.
+					<br><br>
+				In order to fully create the FSR in our avionics software, I had to create a overarching system and individual parts for the three boxes within the rack.
+				These boxes included the server rack, a juntion box, and the transport erector box. I created all the harnessing required for the system, which was very helpful 
+				as previously, all pin and channel assignments could only be determined by poring through various schematics, PDFs, and Excel spreadsheets.
+				This way, whenever any connectivity issues or channel issues occur, it is much more convenient to check what the assignments should be for each
+				specific harness and connector. I also created a Confluence page for external documentation regarding this system. This documentation as well as my work in our
+				avionics software will be used by the Avionics team and the many teams that interface with and troubleshoot the FSR. <br><br>
+				During rocket checks, pre-launch, and flight, when specific channels fall above or below certain thresholds, alarms are raised. However, many of the alarms that 
+				trip are spurious, which results in people ignoring potential important issues. I wanted to create a tool that would help teams understand which alarms are important, 
+				which alarms should have their thresholds changed, and how previous alarms had been dispositioned. 
+				For the creation of the alarm searcher and scraper, the project stucture depended on the needs of the team so after speaking with other teammates,
+				I noted current and previous issues they had with alarms and what format they would prefer for the scraper. My first iteration consisted 
+				of a script that parsed through previous flight information held on a browser database using an API. This could be filtered by run number and other characteristics,
+				and it outputted a dictionary of relevent alarm information and summary information. After this first iteration, I held a preliminary design review 
+				to adjust my deliverable, and we determined that a web scraper would be most helpful. I adjusted searching filters and created a database that can be hosted locally
+				and will eventually be hosted through S4 as parsing through this database will be faster than pulling from the API each time. The web scraper was made using Flask and 
+				will be running on a SpaceX server so anyone on the network can run it. I presented my critical design review and 
+				the web searcher was successful, and it can be used both while on-console and to determine specific information on alarms, and additional filtering functionality can be 
+				added as needed. 
+<!-- 
+				alarm searcher and scraper, understanding needs of team, speaking with various team members and noting current and previous issues they
+				had that would help me understand structure of database and scraper
+				initially created script that parsed through rocket info database, filtered by run number and other characteristics, outputted
+				dictionary of relevant alarm info and summary information
+				did PDR, preliminary design review to adjust deliverable, determined that web scraper would be most helpful
+				whcih filters looking for (run number, tag), create database that can be hosted and parsed through faster than having to pull from 
+				API each time, then CDR in final presentation -> web searcher successful, can add additional filtering functionality as needed -->
+			
+			</p>
+			</div>
+		</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="mailto:ssirroon@olin.edu">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<!-- <li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+									<li><a href="https://www.linkedin.com/in/shamama-sirroon/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+									<li><a href="https://github.com/ssirroon" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<!-- <li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li> -->
+									<li><a href="mailto:ssirroon@olin.edu" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<!-- <ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul> -->
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		</script>
+
+	</body>
+</html>
