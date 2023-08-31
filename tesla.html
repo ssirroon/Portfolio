@@ -106,31 +106,32 @@
 
   <br><br>
 
-  <p class="background-banner">While at Tesla, I worked on a few different projects in addition to being responsible for multiple vehicle-level tests:
-	powertrain, durability, and suspension strength.
+  <p class="background-banner">While at Tesla, I worked on a few different projects in addition to being responsible for multiple vehicle-level tests: 
+	powertrain, durability, and suspension strength. I worked on creating a pothole detection algorithm in MATLAB, created a pitch compensation algorithm, 
+	and wrote data parsing scripts in Python.
+	
 <br><br>
-	My internship projects included creating a pothole detection algorithm and determining road roughness. To create a pothole detection algorithm,
-	I found multiple local potholes at various sizes and depths and tested hitting them at various speeds. I then created variable thresholds for 
-	wheel speed, vehicle speed, longitudinal acceleration, and brake torque. I determined these thresholds through the data I obtained and 
-	wrote a MATLAB script to iterate through CAN data and find potholes determined by the thresholds I set. This algorithm is able to detect approximately
-	96% of the potholes that I hit (125/130). These thresholds will be implemented by the firmware team for pothole data collection on large fleets of
-	our vehicles.
+
+My internship projects included creating a pothole detection algorithm and determining road roughness. To create a pothole detection algorithm, I found multiple 
+local potholes at various sizes and depths and tested hitting them at various speeds. I then created variable thresholds for wheel speed, vehicle speed, longitudinal 
+acceleration, and brake torque. I determined these thresholds through the data I obtained and wrote a MATLAB script to iterate through CAN data and find potholes determined 
+by the thresholds I set. This algorithm is able to detect approximately 96% of the potholes that I hit (125/130). These thresholds will be implemented by the firmware team 
+for pothole data collection on large fleets of our vehicles.
 <br><br>
-	To determine road roughness, I worked with both a commercial LIDAR scanning sensor as well as laser sensors. I mounted a laser sensor in front of each
-	wheel on a Model S, on which the commercial road scanning device is also mounted. By driving through various roads, I was able to look at the road roughness
-	data of the road in front of each wheel. The laser sensor raw output is a voltage representing the distance between the laser sensor and the 
-	road. I created a calibration curve to convert from voltage to distance, and I implemented pitch compensation by integrating the pitch rate signal
-	from the vehicle and using trigonometry to ensure the pitch of the vehicle does not affect the height measurement from the laser sensors. I was
-	able to successfully measure the roughness of the road via both the commercial road scanning device as well as the laser sensors, which means that we will
-	be able to measure road roughenss on many more vehicles using the laser sensors, and will not have to depend on an off-the-shelf product.
+To determine road roughness, I worked with both a commercial LIDAR scanning sensor as well as laser sensors. I mounted a laser sensor in front of each wheel 
+on a Model S, on which the commercial road scanning device is also mounted. By driving through various roads, I was able to look at the road roughness data of the 
+road in front of each wheel. The laser sensor raw output is a voltage representing the distance between the laser sensor and the road. I created a calibration curve 
+to convert from voltage to distance, and I implemented pitch compensation by integrating the pitch rate signal from the vehicle and using trigonometry to ensure the 
+pitch of the vehicle does not affect the height measurement from the laser sensors. I was able to successfully measure the roughness of the road via both the commercial 
+road scanning device as well as the laser sensors, which means that we will be able to measure road roughness on many more vehicles using the laser sensors, and will 
+not have to depend on an off-the-shelf product.
 <br><br>
-	Regarding vehicle-level tests, my responsibilities included
-	working with operators and technicians to ensure vehicles were properly prepped and returned, implementing the various
-	testing procedures with operators, working with the logistics team for vehicle delivery and proving ground usage, CAN signal analysis,
-	and real-time problem solving for any issues that came up. For example, during a durability test that I was running, we had an issue
-	with the camera harness on the vehicle. This issue was dicovered as we ran a self-test on the vehicle every day, and I created a data parsing script in 
-	Python to tell us whether the harness was functioning. After we saw the failure, I connected with the camera team, discussed next steps,
-	and sent the faulty harness to them, replacing it was a new harness we received.
+Regarding vehicle-level tests, my responsibilities included working with operators and technicians to ensure vehicles were properly prepped and returned, 
+implementing the various testing procedures with operators, working with the logistics team for vehicle delivery and proving ground usage, CAN signal 
+analysis, and real-time problem solving for any issues that came up. For example, during a durability test that I was running, we had an issue with 
+the camera harness on the vehicle. This issue was discovered as we ran a self-test on the vehicle every day, and I created a data parsing script in 
+Python to tell us whether the harness was functioning. After we saw the failure, I connected with the camera team, discussed next steps, and sent the 
+faulty harness to them, replacing it with a new harness we received.
 
 </p>
 		</div>

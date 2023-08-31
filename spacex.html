@@ -104,30 +104,31 @@
 			</div>
 							
 					<br><br>
-				<p class="background-banner">During the course of this internship, I worked on the Falcon Avionics team as a software engineering intern and completed
-					4 distinct projects. The first part of my internship focused on working on the Falcon Support Rack (FSR), which is used to power the vehicle prior 
-					to launch, and documenting the rack in our in-house avionics software. The second half focused on the creation of a database and web searcher regarding 
-					alarms thrown during rocket checks, pre-launch, and flight. In addition to these projects, I wrote a few automation scripts to run specific pre-flight 
-					checks that are required before getting the OK for launch.
+				<p class="background-banner">During the course of my SpaceX internship, I worked on the Falcon Avionics team as a software engineering intern and completed 
+					multiple projects. The first part of my internship focused on working on the Falcon Support Rack (FSR), which is used to power the vehicle prior to launch, 
+					and documenting the rack in our in-house avionics software. The second half focused on the creation of a database and web searcher regarding alarms thrown 
+					during rocket checks, pre-launch, and flight. In addition to these projects, I wrote a few automation scripts to run specific pre-flight checks that are 
+					required before getting the OK for launch.
 					<br><br>
-				In order to fully create the FSR in our avionics software, I had to create a overarching system and individual parts for the three boxes within the rack.
-				These boxes included the server rack, a juntion box, and the transport erector box. I created all the harnessing required for the system, which was very helpful 
-				as previously, all pin and channel assignments could only be determined by poring through various schematics, PDFs, and Excel spreadsheets.
-				This way, whenever any connectivity issues or channel issues occur, it is much more convenient to check what the assignments should be for each
-				specific harness and connector. I also created a Confluence page for external documentation regarding this system. This documentation as well as my work in our
-				avionics software will be used by the Avionics team and the many teams that interface with and troubleshoot the FSR. <br><br>
-				During rocket checks, pre-launch, and flight, when specific channels fall above or below certain thresholds, alarms are raised. However, many of the alarms that 
-				trip are spurious, which results in people ignoring potential important issues. I wanted to create a tool that would help teams understand which alarms are important, 
-				which alarms should have their thresholds changed, and how previous alarms had been dispositioned. 
-				For the creation of the alarm searcher and scraper, the project stucture depended on the needs of the team so after speaking with other teammates,
-				I noted current and previous issues they had with alarms and what format they would prefer for the scraper. My first iteration consisted 
-				of a script that parsed through previous flight information held on a browser database using an API. This could be filtered by run number and other characteristics,
-				and it outputted a dictionary of relevent alarm information and summary information. After this first iteration, I held a preliminary design review 
-				to adjust my deliverable, and we determined that a web scraper would be most helpful. I adjusted searching filters and created a database that can be hosted locally
-				and will eventually be hosted through S4 as parsing through this database will be faster than pulling from the API each time. The web scraper was made using Flask and 
-				will be running on a SpaceX server so anyone on the network can run it. I presented my critical design review and 
-				the web searcher was successful, and it can be used both while on-console and to determine specific information on alarms, and additional filtering functionality can be 
-				added as needed. 
+
+					In order to fully create the FSR in our avionics software, I had to create an overarching system and individual parts for the three boxes within the rack. These 
+					boxes included the server rack, a junction box, and the transport erector box. I created all the harnessing required for the system, which was very helpful as 
+					previously, all pin and channel assignments could only be determined by poring through various schematics, PDFs, and Excel spreadsheets. This way, whenever any 
+					connectivity issues or channel issues occur, it is much more convenient to check what the assignments should be for each specific harness and connector. I 
+					also created external documentation regarding this system. This documentation as well as my work in our avionics software will be used by the Avionics team and 
+					the many teams that interface with and troubleshoot the FSR.
+					<br><br>
+					During rocket checks, pre-launch, and flight, when specific channels fall above or below certain thresholds, alarms are raised. However, many of the alarms
+					 that trip are spurious, which results in people ignoring potential important issues. I wanted to create a tool that would help teams understand which alarms 
+					 are important, which alarms should have their thresholds changed, and how previous alarms had been dispositioned. For the creation of the alarm searcher and 
+					 scraper, the project structure depended on the needs of the team. So, after speaking with other teammates, I noted current and previous issues they had with 
+					 alarms and what format they would prefer for the scraper. My first iteration consisted of a script that parsed through previous flight information held on a 
+					 browser database using an API. This could be filtered by run number and other characteristics, and it outputted a dictionary of relevant alarm information 
+					 and summary information. After this first iteration, I held a preliminary design review to adjust my deliverable, and we determined that a web scraper would 
+					 be most helpful. I adjusted searching filters and created a database that can be hosted locally and will eventually be hosted through S4 as parsing through this 
+					 database will be faster than pulling from the API each time. The web scraper was made using Flask and will be running on a SpaceX server so anyone on the network 
+					 can run it. I presented my critical design review and the web searcher was successful, and it can be used both while on-console and to determine specific information 
+					 on alarms, and additional filtering functionality can be added as needed.
 <!-- 
 				alarm searcher and scraper, understanding needs of team, speaking with various team members and noting current and previous issues they
 				had that would help me understand structure of database and scraper
